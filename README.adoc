@@ -1,4 +1,4 @@
-= Red Hat Fuse Workshop Deployer
+= Camel Spring Boot Workshop
 :toc:
 :toc-placement!:
 
