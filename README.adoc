@@ -50,7 +50,7 @@ You just need an updated browser, preferably Chrome or Firefox :)
 |=======================
 | Parameter | Example Value                                      | Definition
 | ocp_token | sha256~vFanQbthlPKfsaldJT3bdLXIyEkd7ypO_XPygY1DNtQ | Access token for a user with cluster-admin privileges.
-| domain    | my-cluster.company.com                             | The cluster's domain. If you have a console URL like this https://console-openshift-console.apps.my-cluster.company.com, your domain is `my-cluster.company.com`.
+| server    | https://api.cluster-xyz.xyz.sandbox9999.opentlc.com:6443                             | The cluster's OpenShift API URL
 | num_users | 8                                                  | Number of users attending the workshop. Have in mind that the more users you have, more resources you are going to need from the cluster.
 | delete_workshop | false | Only use this parameter if you intend to delete the installation and preserve the cluster.
 |=======================
@@ -68,6 +68,8 @@ num_users=REPLACE_ME
 === Install the Workshop
 
 ----
+cd workshop_camel-springboot/ansible
+
 ansible-playbook -e token=${token} -e server=${server} -e num_users=${num_users} playbook.yml
 ----
 
