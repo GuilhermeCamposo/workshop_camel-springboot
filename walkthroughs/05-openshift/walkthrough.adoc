@@ -328,12 +328,6 @@ Now, click on *Route Diagram*. You will see the route in a more human-readable w
 
 image::./images/lab05-fuse-console-new-06.png[]
 
-{empty} +
-
-Click on the *Source* tab. This will show the route source code as XML:
-
-image::./images/lab05-fuse-console-new-07.png[]
-
 === Debugging
 
 Let's try to do some debugging:
