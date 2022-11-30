@@ -1,7 +1,7 @@
 :walkthrough: Integration with Files
 :codeready-url: {che-url}
 :openshift-url: {openshift-host}
-:next-lab-url: ../../../tutorial/fuse-workshop-doc-walkthroughs-03-rest-database/
+:next-lab-url: ../../../tutorial/workshop_camel-springboot-walkthroughs-03-rest-database/
 
 = Lab 2 - Integration with Files
 

@@ -2,7 +2,7 @@
 :codeready-url: {che-url}
 :openshift-url: {openshift-host}
 :user-password: openshift
-:next-lab-url: ../../../tutorial/fuse-workshop-doc-walkthroughs-05-openshift/
+:next-lab-url: ../../../tutorial/workshop_camel-springboot-walkthroughs-05-openshift/
 
 = Lab 4 - Messaging
 

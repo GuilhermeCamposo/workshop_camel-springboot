@@ -37,7 +37,7 @@
         - not module_camel_k
       set_fact:
         solution_explorer_walkthrough_locations:
-          - 'https://github.com/GuilhermeCamposo/fuse-workshop-doc'
+          - 'https://github.com/GuilhermeCamposo/workshop_camel-springboot'
 
     - name: Define domain
       set_fact:
