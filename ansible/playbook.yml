@@ -21,23 +21,16 @@
     fuse_base_image_repo: registry.redhat.io/fuse7
     module_fuse: true
     module_camel_k: false
+    solution_explorer_walkthrough_locations:
+      - 'https://github.com/GuilhermeCamposo/workshop_camel-springboot'
   tasks:
-    - name: Define Module
+    - name: Check Required Parameters
+      fail: msg="This play requires 'server','token' and 'num_users' to be defined"
       when:
-        - module_fuse|bool
-        - module_camel_k|bool
-      set_fact:
-        solution_explorer_walkthrough_locations:
-          - 'https://github.com/GuilhermeCamposo/workshop_camel-springboot'
-          - 'https://github.com/GuilhermeCamposo/camelk-workshop-doc'
-
-    - name: Define Module
-      when:
-        - module_fuse|bool
-        - not module_camel_k
-      set_fact:
-        solution_explorer_walkthrough_locations:
-          - 'https://github.com/GuilhermeCamposo/workshop_camel-springboot'
+        - server is not defined
+        - token is not defined
+        - num_users is not defined
+        - num_users | int > 0
 
     - name: Define domain
       set_fact:
@@ -91,15 +84,6 @@
         - not delete_workshop
       include_role:
         name: fuse-console
-
-    - name: Provision CamelK Operator
-      with_sequence: start=1 end={{ num_users }}
-      when:
-        - num_users|int > 0
-        - not delete_workshop
-        - module_camel_k|bool
-      include_role:
-        name: camel-k
 
     - name: Installation Finished
       when:

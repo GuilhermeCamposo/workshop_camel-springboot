@@ -13,7 +13,6 @@ toc::[]
 * Java: 11
 * AMQ Broker: 7.x
 * Codeready Workspaces: latest
-* [optional] Camel K: 1.4
 
 == Requirements
 
@@ -48,11 +47,11 @@ You just need an updated browser, preferably Chrome or Firefox :)
 
 [options="header"]
 |=======================
-| Parameter | Example Value                                      | Definition
-| token | sha256~vFanQbthlPKfsaldJT3bdLXIyEkd7ypO_XPygY1DNtQ | Access token for a user with cluster-admin privileges.
-| server    | https://api.cluster-xyz.xyz.sandbox9999.opentlc.com:6443                             | The cluster's OpenShift API URL
-| num_users | 8                                                  | Number of users attending the workshop. Have in mind that the more users you have, more resources you are going to need from the cluster.
-| delete_workshop | false | Only use this parameter if you intend to delete the installation and preserve the cluster.
+| Parameter       | Example Value                                            | Definition
+| token           | sha256~vFanQbthlPKfsaldJT3bdLXIyEkd7ypO_XPygY1DNtQ       | Access token for a user with cluster-admin privileges.
+| server          | https://api.cluster-xyz.xyz.sandbox9999.opentlc.com:6443 | The cluster's OpenShift API URL
+| num_users       | 8                                                        | Number of users attending the workshop. Have in mind that the more users you have, more resources you are going to need from the cluster.
+| delete_workshop | false                                                    | Only use this parameter if you intend to delete the installation and preserve the cluster.
 |=======================
 
 === Running the playbook

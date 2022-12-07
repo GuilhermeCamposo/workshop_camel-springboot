@@ -31,20 +31,3 @@
   until: _result.status == 201 or _result.status == 409
   retries: 10
   delay: 15
-
-- name: Create Camel K workspace for {{ user }}
-  when: module_camel_k|bool
-  uri:
-    url: https://codeready-{{ workshop_che_namespace }}.{{ route_subdomain }}/api/workspace/devfile?namespace={{ user }}
-    validate_certs: false
-    method: POST
-    headers:
-      Content-Type: application/json
-      Authorization: "Bearer {{ user_token.json.access_token }}"
-    body: "{{ lookup('template', 'camel-k-devfile.json.j2') }}"
-    body_format: json
-    status_code: 201,409
-  register: _result
-  until: _result.status == 201 or _result.status == 409
-  retries: 10
-  delay: 15
